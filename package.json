@@ -1,0 +1,25 @@
+{
+  "name": "weather-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nitzancohen/weather-chat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nitzancohen/weather-chat/issues"
+  },
+  "homepage": "https://github.com/Nitzancohen/weather-chat#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "font-awesome": "^4.7.0",
+    "handlebars": "^4.0.12",
+    "jquery": "^3.3.1"
+  }
+}
