@@ -1,0 +1,14 @@
+#container {
+    width: 80%;
+    min-width: 500px;
+    margin: 30px 10%;
+}
+
+#search-area {
+    border-bottom: 1px solid #e0dbdc; 
+    margin-bottom: 30px;
+}
+
+.city-container {
+    box-shadow: 2px 3px 9px #6c757d;
+}
