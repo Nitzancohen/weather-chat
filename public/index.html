@@ -10,27 +10,43 @@
 </head>
 
 <body>
-    <div id="container">
-        <div id="search-area">
-            <h2 id="weather-chat">Weather Chat</h2>
-            <div class="input-group mb-3 search-container">
-                <input type="text" class="form-control" id="city-input" placeholder="Search a city...">
-                <div class="input-group-append">
-                    <button type="button" class="btn btn-primary input-group-text" id="search-city">Get Temp</button>
-                </div>
+    <div id="search-area">
+        <h2 id="weather-chat">Weather Chat</h2>
+        <div class="input-group mb-3 search-container">
+            <input type="text" class="form-control" id="city-input" placeholder="Search a city...">
+            <div class="input-group-append">
+                <button type="button" class="btn btn-primary input-group-btn" id="search-city">Get Temp</button>
             </div>
         </div>
-
-        <div id="show-weather"></div>
-
     </div>
-    <div id="special"></div>
+
+    <div id="show-weather"></div>
+
 
     <script id="weather-template" type="text/x-handlebars-template">
         {{#each weatherbox}}
             <div class="city-container">
-                <h4 class="city">{{cityName}} <img src="{{icon}}"></h4>
-                <p class="cityTemp">{{temp}}○c</p>
+                <h4 class="city" data-id="{{id}}">{{cityName}}
+                    <img draggable="false" src="{{icon}}">
+                    <i class="fa fa-trash-o remove-city"></i>
+                </h4>
+                
+                <p class="cityTemp">{{temp_c}}°c / {{temp_f}}°f <span class="local-time">at {{hour}} on {{date}}</span></p>
+                
+                <h6>Comments</h6>
+                
+                <div class="show-comments">
+                    {{#each comments}}
+                        <li class="comment" data-id="{{id}}">{{text}}</li>
+                    {{/each}}
+                </div>
+                
+                <div class="input-group mb-3 comments-container">
+                    <input type="text" class="form-control comment-input" placeholder="Comment about the weather in {{cityName}}">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-success input-group-btn add-comment">Comment</button>
+                    </div>
+                </div>
             </div>
         {{/each}}
     </script>

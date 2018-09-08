@@ -1,6 +1,6 @@
 class Comment {
-    constructor (text, post) {
-        this.id = post.commentsCount;
+    constructor (text, commentID) {
+        this.id = commentID;
         this.text = text;
     }
 }
